@@ -19,6 +19,47 @@ Next.js 14 (App Router) + TypeScript + Tailwind CSS 的西班牙語學習平台�
 3. 安裝依賴：`npm install`
 4. 啟動開發：`npm run dev`
 
+## Cloudflare Pages Deployment
+
+### Prerequisites
+- Cloudflare account with Pages access
+- Node.js 20.11+ installed locally
+
+### Deployment Steps
+
+1. **Install Cloudflare dependencies:**
+   ```bash
+   npm install --save-dev @cloudflare/next-on-pages wrangler
+   ```
+
+2. **Build for Cloudflare Pages:**
+   ```bash
+   npm run pages:build
+   ```
+
+3. **Deploy to Cloudflare Pages:**
+   ```bash
+   npm run pages:deploy
+   ```
+
+### Environment Variables
+Set these in Cloudflare Pages dashboard (Settings > Environment variables):
+- `DEEPSEEK_API_KEY` - Your DeepSeek API key
+- `DEEPSEEK_BASE_URL` - DeepSeek API endpoint (default: https://api.deepseek.com/v1)
+- `DEEPSEEK_MODEL` - Model name (default: deepseek-chat)
+- `SUPABASE_URL` - Supabase project URL
+- `SUPABASE_ANON_KEY` - Supabase anonymous key
+- `SUPABASE_SERVICE_ROLE_KEY` - Supabase service role key
+- `NEXT_PUBLIC_DEFAULT_LOCALE` - Default locale (default: zh-TW)
+- `DAILY_TOKEN_LIMIT` - Daily token limit per user (default: 120000)
+
+### Git Integration (Alternative)
+1. Connect your GitHub repository to Cloudflare Pages
+2. Set build command: `npm run pages:build`
+3. Set output directory: `.vercel/output/static`
+4. Configure environment variables in dashboard
+5. Cloudflare will auto-deploy on push
+
 ## 目前完成
 
 - 標準 App Router 結構

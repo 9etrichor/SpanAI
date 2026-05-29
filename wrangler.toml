@@ -1,0 +1,21 @@
+name = "spanai"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+NEXT_PUBLIC_DEFAULT_LOCALE = "zh-TW"
+
+# Build configuration for Cloudflare Pages
+[build]
+command = "npm run build"
+cwd = "."
+watch_dir = "."
+
+# Environment variables (secrets should be set in Cloudflare dashboard)
+# DEEPSEEK_API_KEY
+# DEEPSEEK_BASE_URL
+# DEEPSEEK_MODEL
+# SUPABASE_URL
+# SUPABASE_ANON_KEY
+# SUPABASE_SERVICE_ROLE_KEY
+# DAILY_TOKEN_LIMIT

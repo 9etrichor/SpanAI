@@ -3,6 +3,8 @@ import { runAiTask } from "@/lib/ai";
 import { assertDailyLimit, saveUsageLog } from "@/lib/usage";
 import { fail, getUserIdFromHeaders, ok } from "@/lib/api";
 
+export const runtime = 'edge';
+
 export async function POST(req: NextRequest) {
   try {
     const body = (await req.json()) as { verb?: string; locale?: "zh-TW" | "es" };
