@@ -7,12 +7,6 @@ pages_build_output_dir = ".vercel/output/static"
 [vars]
 NEXT_PUBLIC_DEFAULT_LOCALE = "zh-TW"
 
-# Build configuration for Cloudflare Pages
-[build]
-command = "npm run build"
-cwd = "."
-watch_dir = "."
-
 # Environment variables (secrets should be set in Cloudflare dashboard)
 # DEEPSEEK_API_KEY
 # DEEPSEEK_BASE_URL
