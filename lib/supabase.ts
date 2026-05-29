@@ -1,8 +1,8 @@
 import { createClient } from "@supabase/supabase-js";
 import { getRequiredEnv } from "@/lib/env";
 
-let supabaseAdminInstance: ReturnType<typeof createClient> | null = null;
-let supabaseClientInstance: ReturnType<typeof createClient> | null = null;
+let supabaseAdminInstance: any = null;
+let supabaseClientInstance: any = null;
 
 export function getSupabaseAdmin() {
   if (!supabaseAdminInstance) {

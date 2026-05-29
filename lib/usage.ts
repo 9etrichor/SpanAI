@@ -19,7 +19,7 @@ export async function getTodayTokenUsage(userId: string): Promise<number> {
     throw new Error(`Failed to read token usage: ${error.message}`);
   }
 
-  return data.reduce((sum, row) => sum + (row.tokens_total ?? 0), 0);
+  return data.reduce((sum: number, row: any) => sum + (row.tokens_total ?? 0), 0);
 }
 
 export async function assertDailyLimit(userId: string, requestedTokens = 0): Promise<void> {
