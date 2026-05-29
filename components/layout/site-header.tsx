@@ -14,12 +14,12 @@ export function SiteHeader({ locale }: SiteHeaderProps) {
   const dict = dictionaries[locale];
 
   const navItems = [
-    { href: "/", label: dict.nav.home },
-    { href: "/query", label: dict.nav.query },
-    { href: "/conjugation", label: dict.nav.conjugation },
-    { href: "/patterns", label: dict.nav.patterns },
-    { href: "/contexts", label: dict.nav.contexts },
-    { href: "/progress", label: dict.nav.progress }
+    { href: "/" as const, label: dict.nav.home },
+    { href: "/query" as const, label: dict.nav.query },
+    { href: "/conjugation" as const, label: dict.nav.conjugation },
+    { href: "/patterns" as const, label: dict.nav.patterns },
+    { href: "/contexts" as const, label: dict.nav.contexts },
+    { href: "/progress" as const, label: dict.nav.progress }
   ];
 
   return (
